@@ -74,7 +74,7 @@
         app:layout_constraintVertical_bias="0.021" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tf_fio"
+        android:id="@+id/til_fio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -95,7 +95,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tf_date_of_birth"
+        android:id="@+id/til_date_of_birth"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -103,7 +103,7 @@
         app:layout_constraintEnd_toEndOf="@+id/content_end"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/content_start"
-        app:layout_constraintTop_toBottomOf="@+id/tf_fio"
+        app:layout_constraintTop_toBottomOf="@+id/til_fio"
         app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -116,6 +116,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/btn_save_and_next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
@@ -125,7 +126,7 @@
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/content_end"
-        app:layout_constraintTop_toBottomOf="@+id/tf_date_of_birth"
+        app:layout_constraintTop_toBottomOf="@+id/til_date_of_birth"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
