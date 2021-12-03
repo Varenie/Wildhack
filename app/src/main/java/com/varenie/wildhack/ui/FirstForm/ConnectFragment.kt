@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentConnectBinding
 
@@ -27,7 +28,10 @@ class ConnectFragment : Fragment() {
         _binding = FragmentConnectBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-
+        val btnNext = binding.btnSaveAndNext
+        btnNext.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_navigation_connect_to_navigation_living_place)
+        }
 
         return root
     }

@@ -145,4 +145,5 @@ class MainDataFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }

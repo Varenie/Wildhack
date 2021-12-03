@@ -18,9 +18,14 @@
     <string name="save">Сохранить</string>
     <string name="birth_example">дд/мм/гггг</string>
     <string name="label_birth">Дата рождения</string>
-    <string name="mail_label">ВАШ АДРЕС ЭЛ. ПОЧТЫ</string>
+    <string name="mail_label">Ваш адрес эл. почты</string>
     <string name="email_example">email@example.com</string>
     <string name="social_network_label">ссылка на профили любимой соцсети</string>
     <string name="phone_label">Номер телефона(Telegramm)</string>
+    <string name="phone_example">+7(___) ___-__-__</string>
+    <string name="question_living">Где ты живешь?</string>
+    <string name="living_place_label">Край/область, населенный пункт</string>
+    <string name="living_place_example">Место жительства</string>
+    <string name="privacy_policy">Я согласен с <u>политикой использования перснональных данных</u></string>
 
 </resources>
