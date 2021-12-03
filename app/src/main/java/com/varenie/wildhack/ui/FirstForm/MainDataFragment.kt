@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.google.android.material.textfield.TextInputEditText
@@ -35,11 +36,11 @@ class MainDataFragment : Fragment() {
         _binding = FragmentMainDataBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val tietFio = binding.tietFio
-        val tietDate = binding.tietDateOfBirth
+        val etFio = binding.etFio
+        val etDate = binding.etDateOfBirth
 
-        val tw = setTextWatcher(tietDate)
-        tietDate.addTextChangedListener(tw)
+        val tw = setTextWatcher(etDate)
+        etDate.addTextChangedListener(tw)
 
         val btnNext = binding.btnSaveAndNext
 
@@ -50,7 +51,7 @@ class MainDataFragment : Fragment() {
         return root
     }
 
-    private fun setTextWatcher(dateEditText: TextInputEditText): TextWatcher {
+    private fun setTextWatcher(dateEditText: EditText): TextWatcher {
         val tw = object: TextWatcher {
 
             override fun beforeTextChanged(charSequence: CharSequence?, i: Int, i1: Int, i2: Int) {}
@@ -81,7 +82,8 @@ class MainDataFragment : Fragment() {
                     Log.d("curr text", currText)
                     currText = currText.substring(lastSeperatorPos + 1)
                 }
-                if (!currText.isEmpty()) {
+                //баг с симовлом конца строки
+                if (!currText.isNullOrBlank()) {
                     when (separatorCount) {
                         0 -> {
                             val date = currText.toInt()

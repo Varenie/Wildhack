@@ -7,10 +7,20 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="start_form">Заполнить анкету</string>
+
     <string name="question_in_main">Как мы можем к вам обращаться?</string>
+    <string name="question_in_connect">Как с вами связаться?</string>
+
     <string name="text_under_first_question">Введите ваши данные как в паспорте</string>
+
     <string name="fio_example">Иванов Иван Иванович</string>
     <string name="fio">ФИО</string>
     <string name="save">Сохранить</string>
-    <string name="first_page">1/3</string>
+    <string name="birth_example">дд/мм/гггг</string>
+    <string name="label_birth">Дата рождения</string>
+    <string name="mail_label">ВАШ АДРЕС ЭЛ. ПОЧТЫ</string>
+    <string name="email_example">email@example.com</string>
+    <string name="social_network_label">ссылка на профили любимой соцсети</string>
+    <string name="phone_label">Номер телефона(Telegramm)</string>
+
 </resources>
