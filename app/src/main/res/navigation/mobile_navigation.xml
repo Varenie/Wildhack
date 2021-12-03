@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_main_data"
-        android:name="com.varenie.wildhack.ui.FirstForm.MainDataFragment"
+        android:name="com.varenie.wildhack.ui.FirstForm.Registration.MainDataFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_main_data" >
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/navigation_connect"
-        android:name="com.varenie.wildhack.ui.FirstForm.ConnectFragment"
+        android:name="com.varenie.wildhack.ui.FirstForm.Registration.ConnectFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_connect" >
         <action
@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/navigation_living_place"
-        android:name="com.varenie.wildhack.ui.FirstForm.LivingPlaceFragment"
+        android:name="com.varenie.wildhack.ui.FirstForm.Registration.LivingPlaceFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_living_place" />
     <fragment
@@ -36,7 +36,16 @@
         android:label="fragment_hello"
         tools:layout="@layout/fragment_hello" >
         <action
-            android:id="@+id/action_helloFragment_to_navigation_main_data"
+            android:id="@+id/action_helloFragment_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkFragment"
+        android:name="com.varenie.wildhack.ui.FirstForm.CheckFragment"
+        android:label="fragment_check"
+        tools:layout="@layout/fragment_check" >
+        <action
+            android:id="@+id/action_checkFragment_to_navigation_main_data"
             app:destination="@id/navigation_main_data" />
     </fragment>
 </navigation>

@@ -6,7 +6,7 @@
     <string name="title_notifications">Notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="start_form">Заполнить анкету</string>
+    <string name="start_form">Регистрация</string>
 
     <string name="question_in_main">Как мы можем к вам обращаться?</string>
     <string name="question_in_connect">Как с вами связаться?</string>
@@ -27,5 +27,10 @@
     <string name="living_place_label">Край/область, населенный пункт</string>
     <string name="living_place_example">Место жительства</string>
     <string name="privacy_policy">Я согласен с <u>политикой использования перснональных данных</u></string>
+    <string name="text_in_check">Лалала</string>
+    <string name="about_oneself">Рассказать о себе</string>
+    <string name="test">Пройти тест</string>
+    <string name="skills">Указать свои навыки</string>
+    <string name="creative">Творческое задание</string>
 
 </resources>

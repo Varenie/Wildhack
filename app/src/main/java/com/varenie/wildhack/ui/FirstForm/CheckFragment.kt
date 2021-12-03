@@ -1,16 +1,17 @@
-package com.varenie.wildhack.ui
+package com.varenie.wildhack.ui.FirstForm
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.varenie.wildhack.R
+import com.varenie.wildhack.databinding.FragmentCheckBinding
 import com.varenie.wildhack.databinding.FragmentHelloBinding
 
-class HelloFragment : Fragment() {
-    private var _binding: FragmentHelloBinding? = null
+class CheckFragment : Fragment() {
+    private var _binding: FragmentCheckBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -19,17 +20,14 @@ class HelloFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHelloBinding.inflate(inflater, container, false)
+        _binding = FragmentCheckBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val btnStart = binding.btnStartForm
-
-        btnStart.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_helloFragment_to_checkFragment)
+        val reglayout = binding.llReg
+        reglayout.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_checkFragment_to_navigation_main_data)
         }
-
         return root
     }
-
 
 }

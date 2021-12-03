@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.FirstForm.LivingPlaceFragment">
+    tools:context=".ui.FirstForm.Registration.LivingPlaceFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/content_start"
@@ -107,7 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
-        android:drawableRight="@drawable/ic_arrow_forward"
+        android:drawableRight="@drawable/ic_arrow_forward_30"
         android:text="@string/save"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"

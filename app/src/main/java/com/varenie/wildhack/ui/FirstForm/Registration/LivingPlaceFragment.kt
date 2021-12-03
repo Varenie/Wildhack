@@ -1,4 +1,4 @@
-package com.varenie.wildhack.ui.FirstForm
+package com.varenie.wildhack.ui.FirstForm.Registration
 
 import android.os.Bundle
 import android.view.LayoutInflater

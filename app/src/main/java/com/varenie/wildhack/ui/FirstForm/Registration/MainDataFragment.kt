@@ -1,6 +1,5 @@
-package com.varenie.wildhack.ui.FirstForm
+package com.varenie.wildhack.ui.FirstForm.Registration
 
-import android.app.DatePickerDialog
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -11,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.google.android.material.textfield.TextInputEditText
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentMainDataBinding
 import java.text.SimpleDateFormat
