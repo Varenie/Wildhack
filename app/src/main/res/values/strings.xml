@@ -32,5 +32,9 @@
     <string name="test">Пройти тест</string>
     <string name="skills">Указать свои навыки</string>
     <string name="creative">Творческое задание</string>
+    <string name="let_meet">Давайте познакомимся</string>
+    <string name="meet_description_1">Вам предстоит рассказать о себе и своем походном опыте, заполнив форму.</string>
+    <string name="meet_description_2">Нам это нужно, чтобы выбрать лучших кандидатов.</string>
+    <string name="start_test">Начать тестирование</string>
 
 </resources>

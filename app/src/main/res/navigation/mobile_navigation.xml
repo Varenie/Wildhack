@@ -47,5 +47,13 @@
         <action
             android:id="@+id/action_checkFragment_to_navigation_main_data"
             app:destination="@id/navigation_main_data" />
+        <action
+            android:id="@+id/action_checkFragment_to_letsMeet"
+            app:destination="@id/letsMeet" />
     </fragment>
+    <fragment
+        android:id="@+id/letsMeet"
+        android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.LetsMeet"
+        android:label="fragment_lets_meet"
+        tools:layout="@layout/fragment_lets_meet" />
 </navigation>
