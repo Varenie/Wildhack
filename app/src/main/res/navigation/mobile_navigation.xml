@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/helloFragment">
+
+    <fragment
+        android:id="@+id/navigation_main_data"
+        android:name="com.varenie.wildhack.ui.FirstForm.MainDataFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_main_data" >
+        <action
+            android:id="@+id/action_navigation_main_data_to_navigation_connect"
+            app:destination="@id/navigation_connect" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_connect"
+        android:name="com.varenie.wildhack.ui.FirstForm.ConnectFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_connect" >
+        <action
+            android:id="@+id/action_navigation_connect_to_navigation_living_place"
+            app:destination="@id/navigation_living_place" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_living_place"
+        android:name="com.varenie.wildhack.ui.FirstForm.LivingPlaceFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_living_place" />
+    <fragment
+        android:id="@+id/helloFragment"
+        android:name="com.varenie.wildhack.ui.HelloFragment"
+        android:label="fragment_hello"
+        tools:layout="@layout/fragment_hello" >
+        <action
+            android:id="@+id/action_helloFragment_to_navigation_main_data"
+            app:destination="@id/navigation_main_data" />
+    </fragment>
+</navigation>
