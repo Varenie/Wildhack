@@ -30,20 +30,6 @@ class CheckFragment : Fragment() {
         val skillsLayout = binding.llSkills
         val creativeLayout = binding.llCreative
 
-        val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
-        val regDone = sharedPref.getBoolean("RegDone", false)
-        val aboutDone = sharedPref.getBoolean("AboutDone", false)
-
-        if (regDone) {
-            binding.cbReg.isChecked = true
-            regLayout.isClickable = false
-        }
-
-        if (aboutDone) {
-            binding.cbAboutOneself.isChecked = true
-            binding.llAboutOneself.isClickable = false
-        }
-
         regLayout.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_checkFragment_to_navigation_main_data)
         }
@@ -69,6 +55,7 @@ class CheckFragment : Fragment() {
         val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
         val regDone = sharedPref.getBoolean("RegDone", false)
         val aboutDone = sharedPref.getBoolean("AboutDone", false)
+        val testDone = sharedPref.getBoolean("TestDone", false)
 
         if (regDone) {
             binding.cbReg.isChecked = true
@@ -78,6 +65,11 @@ class CheckFragment : Fragment() {
         if (aboutDone) {
             binding.cbAboutOneself.isChecked = true
             binding.llAboutOneself.isClickable = false
+        }
+
+        if (testDone) {
+            binding.cbTest.isChecked = true
+            binding.llTest.isClickable = false
         }
     }
 
