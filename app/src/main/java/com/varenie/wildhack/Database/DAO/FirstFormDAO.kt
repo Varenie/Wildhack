@@ -76,6 +76,7 @@ class FirstFormDAO(val context: Context) {
 
     fun addNameAndBirth(fio: String, birth: String) {
         val fioArr = fio.split(" ")
+        //подумать
         val lastName = fioArr[0]
         val firstName = fioArr[1]
         val middleName = fioArr[2]
@@ -102,7 +103,22 @@ class FirstFormDAO(val context: Context) {
     }
 
     fun addMailSocilaPhone(id: Int, email: String, socialnetwork: String, phone: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_e_mail, email)
+            put(COLUMN_socialnetwork, socialnetwork)
+            put(COLUMN_phone_number, phone)
+        }
 
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addLvingPlacePrivacy(id: Int, livingPlace: String, isPrivacy: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_city, livingPlace)
+            put(COLUMN_consent_to_data_collection, isPrivacy)
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
     }
 
     fun checkDB() {
@@ -114,6 +130,11 @@ class FirstFormDAO(val context: Context) {
         Log.i(TAG, cursor.getString(indexLastName))
         Log.i(TAG, cursor.getString(indexMiddleName))
         Log.i(TAG, cursor.getString(indexBirth))
+//        Log.i(TAG, cursor.getString(indexEmail))
+//        Log.i(TAG, cursor.getString(indexSocialNetwork))
+//        Log.i(TAG, cursor.getString(indexPhone))
+//        Log.i(TAG, cursor.getString(indexCity))
+//        Log.i(TAG, cursor.getString(indexIsCanCollectData))
     }
 
 }

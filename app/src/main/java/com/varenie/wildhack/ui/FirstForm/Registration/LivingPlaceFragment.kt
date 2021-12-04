@@ -1,6 +1,8 @@
 package com.varenie.wildhack.ui.FirstForm.Registration
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import com.varenie.wildhack.Database.DAO.FirstFormDAO
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentLivingPlaceBinding
 
@@ -35,7 +38,38 @@ class LivingPlaceFragment : Fragment() {
             }
         }
 
+        binding.btnSaveAndNext.setOnClickListener {
+            if (checkData()) {
+                val table = FirstFormDAO(requireContext())
+                table.checkDB()
+
+                //Navigate
+            }
+        }
         return root
+    }
+
+    private fun checkData(): Boolean {
+        val etLivingPlace = binding.etLivingPlace
+        val cbPrivacy = binding.privacyPolicy
+
+        if (!etLivingPlace.text.isNullOrBlank()) {
+            val table = FirstFormDAO(requireContext())
+
+            val isPrivacy = if (cbPrivacy.isChecked) {
+                "true"
+            } else {
+                "false"
+            }
+
+            val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
+            val id = sharedPref.getInt("FormId", 0)
+
+            table.addLvingPlacePrivacy(id, etLivingPlace.text.toString(), isPrivacy)
+            return true
+        }
+
+        return false
     }
 
     override fun onDestroyView() {
