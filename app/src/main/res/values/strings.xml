@@ -38,5 +38,8 @@
     <string name="start_test">Начать тестирование</string>
     <string name="Test">Тест</string>
     <string name="test_description">Здесь будут представлены вопросы, которые помогут нам понять в какой роли вам будет комфортней всего. Пожайлуста, отвечайте честно</string>
+    <string name="question_skills">Какие у вас навыки?</string>
+    <string name="skills_description_1">А теперь самое время определиться с твоим местом в коллективе</string>
+    <string name="skills_description_2">Пожалуйста, отвечайте честно, чтобы получить удовольствие от волонтерской деятельности.</string>
 
 </resources>
