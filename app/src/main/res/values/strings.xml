@@ -78,4 +78,18 @@
     <string name="save_skills_1">Далее вам предстоит рассказать о себе и своем походном опыте, заполнив форму с большим количеством вопросов.</string>
     <string name="save_skills_2">Нам это нужно, чтобы выбрать лучших кандидатов.</string>
     <string name="save_skills_btn">Завершить</string>
+    <string name="need_your_id">Нам нужен ваш ID</string>
+    <string name="get_start_education">Чтобы приступить к обучению, пройдите регистрацию на сайте <u>dobro.ru</u></string>
+    <string name="your_id_on_dobro_ru">Ваш ID на <u>dobro.ru</u></string>
+    <string name="tutorials">Обучающие материалы</string>
+    <string name="les_one">Урок №1</string>
+    <string name="les_one_theme">Название темы 1</string>
+    <string name="les_two">Урок №2</string>
+    <string name="les_two_theme">Название темы 2</string>
+    <string name="les_three">Урок №3</string>
+    <string name="les_three_theme">Название темы 3</string>
+    <string name="final_test">Итоговый тест</string>
+    <string name="test1_ans">0/3 ответов</string>
+    <string name="test1">Тест для волонтера</string>
+    <string name="lesson_one_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
 </resources>
