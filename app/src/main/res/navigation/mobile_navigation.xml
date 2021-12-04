@@ -64,7 +64,11 @@
         android:id="@+id/letsMeet"
         android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.LetsMeet"
         android:label="fragment_lets_meet"
-        tools:layout="@layout/fragment_lets_meet" />
+        tools:layout="@layout/fragment_lets_meet" >
+        <action
+            android:id="@+id/action_letsMeet_to_letsMeetPagerFragment"
+            app:destination="@id/letsMeetPagerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/testHelloFragment"
         android:name="com.varenie.wildhack.ui.FirstForm.Test.TestHelloFragment"
@@ -98,4 +102,9 @@
         android:name="com.varenie.wildhack.ui.FirstForm.Test.TestPagerFragment"
         android:label="fragment_test_pager"
         tools:layout="@layout/fragment_test_pager" />
+    <fragment
+        android:id="@+id/letsMeetPagerFragment"
+        android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.LetsMeetPagerFragment"
+        android:label="fragment_lets_meet_pager"
+        tools:layout="@layout/fragment_lets_meet_pager" />
 </navigation>

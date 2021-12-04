@@ -50,4 +50,10 @@
     <string name="no">Нет</string>
     <string name="finish">Завершить</string>
     <string name="creqtive_question_text">Возможно, твой ответ на предыдущий вопрос (рисунок, видео, цитата из текста) нам захочется опубликовать в социальных сетях Школы. Ты даёшь нам такое право?</string>
+    <string name="about_fragment">Расскажи о себе</string>
+    <string name="doing_example">Сфера деятельности, профессия, направление учёбы</string>
+    <string name="doing_label">Чем ты занимаешься?</string>
+    <string name="travel_experience">Какой у тебя походный опыт?</string>
+    <string name="question_distant_point">Какую самую дальнюю точку России ты посетил</string>
+    <string name="point_label">Название</string>
 </resources>

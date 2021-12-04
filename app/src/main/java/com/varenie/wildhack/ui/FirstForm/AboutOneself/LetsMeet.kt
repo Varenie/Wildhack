@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentCheckBinding
 import com.varenie.wildhack.databinding.FragmentLetsMeetBinding
@@ -22,6 +23,9 @@ class LetsMeet : Fragment() {
         _binding = FragmentLetsMeetBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        binding.btnStartTest.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_letsMeet_to_letsMeetPagerFragment)
+        }
 
         return root
     }
