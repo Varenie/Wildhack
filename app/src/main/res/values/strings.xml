@@ -73,4 +73,9 @@
     <string name="criteria_for_job">Расскажи, пожалуйста, чем ты руководствовался при выборе ВУЗа/ будущей профессии?</string>
     <string name="important_of_job">Что для тебя самое важное в твоей профессии? Почему ты занимаешься именно этим?</string>
     <string name="yourself_skills">Какие из перечисленных навыков вам присущи?</string>
+    <string name="other_skills">Есть ли у вас навыки, которых не было в анкете?</string>
+    <string name="save_skills_answer">Ваши ответы сохранены</string>
+    <string name="save_skills_1">Далее вам предстоит рассказать о себе и своем походном опыте, заполнив форму с большим количеством вопросов.</string>
+    <string name="save_skills_2">Нам это нужно, чтобы выбрать лучших кандидатов.</string>
+    <string name="save_skills_btn">Завершить</string>
 </resources>

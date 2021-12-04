@@ -6,11 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.varenie.wildhack.R
-import com.varenie.wildhack.databinding.ActivityMainBinding
 import com.varenie.wildhack.databinding.FragmentYourselfSkillsBinding
-import com.varenie.wildhack.ui.FirstForm.Skills.SkillsAdapter
+
 
 class Your_self_skills : Fragment() {
     lateinit var binding: FragmentYourselfSkillsBinding

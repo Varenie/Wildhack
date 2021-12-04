@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.SkillItemBinding
 
-class Skill_adapter:RecyclerView.Adapter<Skill_adapter.Skill_Holder>() {
+class SkillsAdapter:RecyclerView.Adapter<SkillsAdapter.Skill_Holder>() {
     val skill_list = arrayOf("Умею рисовать или занимаюсь каким-то рукоделием, вижу мир как художник",
         "Имею опыт и знания в развитии малого предпринимательства",
         "Виртуозно  управляюсь с киркой и лопатой. Или просто умею работатть с инструментом",
