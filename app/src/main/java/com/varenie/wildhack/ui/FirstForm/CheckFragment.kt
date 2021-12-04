@@ -1,5 +1,6 @@
 package com.varenie.wildhack.ui.FirstForm
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -29,6 +30,14 @@ class CheckFragment : Fragment() {
         val skillsLayout = binding.llSkills
         val creativeLayout = binding.llCreative
 
+        val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
+        val regDone = sharedPref.getBoolean("RegDone", false)
+
+        if (regDone) {
+            binding.cbReg.isChecked = true
+            regLayout.isClickable = false
+        }
+
         regLayout.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_checkFragment_to_navigation_main_data)
         }
@@ -46,6 +55,18 @@ class CheckFragment : Fragment() {
         }
 
         return root
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
+        val regDone = sharedPref.getBoolean("RegDone", false)
+
+        if (regDone) {
+            binding.cbReg.isChecked = true
+            binding.llReg.isClickable = false
+        }
     }
 
 }

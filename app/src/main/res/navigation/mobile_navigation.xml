@@ -29,7 +29,11 @@
         android:id="@+id/navigation_living_place"
         android:name="com.varenie.wildhack.ui.FirstForm.Registration.LivingPlaceFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_living_place" />
+        tools:layout="@layout/fragment_living_place" >
+        <action
+            android:id="@+id/action_navigation_living_place_to_save_skills_answers"
+            app:destination="@id/save_skills_answers" />
+    </fragment>
     <fragment
         android:id="@+id/helloFragment"
         android:name="com.varenie.wildhack.ui.HelloFragment"
@@ -116,4 +120,13 @@
         android:name="com.varenie.wildhack.ui.FirstForm.Your_self_skills"
         android:label="fragment_yourself_skills"
         tools:layout="@layout/fragment_yourself_skills" />
+    <fragment
+        android:id="@+id/save_skills_answers"
+        android:name="com.varenie.wildhack.ui.FirstForm.Skills.save_skills_answers"
+        android:label="fragment_save_reg_answers"
+        tools:layout="@layout/fragment_save_reg_answers" >
+        <action
+            android:id="@+id/action_save_skills_answers_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
 </navigation>

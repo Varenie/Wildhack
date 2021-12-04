@@ -43,7 +43,7 @@ class LivingPlaceFragment : Fragment() {
                 val table = FirstFormDAO(requireContext())
                 table.checkDB()
 
-                //Navigate
+                Navigation.findNavController(it).navigate(R.id.action_navigation_living_place_to_save_skills_answers)
             }
         }
         return root
