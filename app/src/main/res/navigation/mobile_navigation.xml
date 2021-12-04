@@ -110,7 +110,11 @@
         android:id="@+id/testPagerFragment"
         android:name="com.varenie.wildhack.ui.FirstForm.Test.TestPagerFragment"
         android:label="fragment_test_pager"
-        tools:layout="@layout/fragment_test_pager" />
+        tools:layout="@layout/fragment_test_pager" >
+        <action
+            android:id="@+id/action_testPagerFragment_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
     <fragment
         android:id="@+id/your_self_skills"
         android:name="com.varenie.wildhack.ui.FirstForm.Your_self_skills"
