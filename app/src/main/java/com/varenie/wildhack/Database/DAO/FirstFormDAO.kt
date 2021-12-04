@@ -121,6 +121,32 @@ class FirstFormDAO(val context: Context) {
         db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
     }
 
+    fun addProfession(id: Int, profession: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_profession, profession)
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addPointExperience(id: Int, distantPoint: String, experience: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_fathest_point_in_russia, distantPoint)
+            put(COLUMN_camping_experience, experience)
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addCriteriaProject(id: Int, criteria: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_criteria_of_volunteer_projects, criteria)
+
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
     fun checkDB() {
         cursor = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
         cursor.moveToFirst()

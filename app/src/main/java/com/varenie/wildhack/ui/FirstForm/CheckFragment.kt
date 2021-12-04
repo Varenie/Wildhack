@@ -32,10 +32,16 @@ class CheckFragment : Fragment() {
 
         val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
         val regDone = sharedPref.getBoolean("RegDone", false)
+        val aboutDone = sharedPref.getBoolean("AboutDone", false)
 
         if (regDone) {
             binding.cbReg.isChecked = true
             regLayout.isClickable = false
+        }
+
+        if (aboutDone) {
+            binding.cbAboutOneself.isChecked = true
+            binding.llAboutOneself.isClickable = false
         }
 
         regLayout.setOnClickListener {
@@ -62,10 +68,16 @@ class CheckFragment : Fragment() {
 
         val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
         val regDone = sharedPref.getBoolean("RegDone", false)
+        val aboutDone = sharedPref.getBoolean("AboutDone", false)
 
         if (regDone) {
             binding.cbReg.isChecked = true
             binding.llReg.isClickable = false
+        }
+
+        if (aboutDone) {
+            binding.cbAboutOneself.isChecked = true
+            binding.llAboutOneself.isClickable = false
         }
     }
 

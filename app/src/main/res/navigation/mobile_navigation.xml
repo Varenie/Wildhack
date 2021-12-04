@@ -69,9 +69,10 @@
         android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.LetsMeet"
         android:label="fragment_lets_meet"
         tools:layout="@layout/fragment_lets_meet" >
+
         <action
-            android:id="@+id/action_letsMeet_to_letsMeetPagerFragment"
-            app:destination="@id/letsMeetPagerFragment" />
+            android:id="@+id/action_letsMeet_to_firstPage"
+            app:destination="@id/firstPage" />
     </fragment>
     <fragment
         android:id="@+id/testHelloFragment"
@@ -111,11 +112,6 @@
         android:label="fragment_test_pager"
         tools:layout="@layout/fragment_test_pager" />
     <fragment
-        android:id="@+id/letsMeetPagerFragment"
-        android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.LetsMeetPagerFragment"
-        android:label="fragment_lets_meet_pager"
-        tools:layout="@layout/fragment_lets_meet_pager" />
-    <fragment
         android:id="@+id/your_self_skills"
         android:name="com.varenie.wildhack.ui.FirstForm.Your_self_skills"
         android:label="fragment_yourself_skills"
@@ -127,6 +123,30 @@
         tools:layout="@layout/fragment_save_reg_answers" >
         <action
             android:id="@+id/action_save_skills_answers_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstPage"
+        android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.FirstPage"
+        android:label="FirstPage" >
+        <action
+            android:id="@+id/action_firstPage_to_secondPage"
+            app:destination="@id/secondPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondPage"
+        android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.SecondPage"
+        android:label="SecondPage" >
+        <action
+            android:id="@+id/action_secondPage_to_thirdPage"
+            app:destination="@id/thirdPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdPage"
+        android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.ThirdPage"
+        android:label="ThirdPage" >
+        <action
+            android:id="@+id/action_thirdPage_to_checkFragment"
             app:destination="@id/checkFragment" />
     </fragment>
 </navigation>

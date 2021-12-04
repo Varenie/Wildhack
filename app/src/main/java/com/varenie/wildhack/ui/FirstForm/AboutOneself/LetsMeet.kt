@@ -24,7 +24,7 @@ class LetsMeet : Fragment() {
         val root: View = binding.root
 
         binding.btnStartTest.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_letsMeet_to_letsMeetPagerFragment)
+            Navigation.findNavController(it).navigate(R.id.action_letsMeet_to_firstPage)
         }
 
         return root
