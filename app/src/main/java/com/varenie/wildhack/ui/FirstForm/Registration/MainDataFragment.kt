@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import com.varenie.wildhack.Database.DAO.FirstFormDAO
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentMainDataBinding
 import java.text.SimpleDateFormat
@@ -34,7 +35,6 @@ class MainDataFragment : Fragment() {
         _binding = FragmentMainDataBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val etFio = binding.etFio
         val etDate = binding.etDateOfBirth
 
         val tw = setTextWatcher(etDate)
@@ -43,7 +43,13 @@ class MainDataFragment : Fragment() {
         val btnNext = binding.btnSaveAndNext
 
         btnNext.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_navigation_main_data_to_navigation_connect)
+            if(checkData()) {
+                val table = FirstFormDAO(requireContext())
+                table.checkDB()
+
+                Navigation.findNavController(it)
+                    .navigate(R.id.action_navigation_main_data_to_navigation_connect)
+            }
         }
         binding.btnBack.setOnClickListener {
             Navigation.findNavController(it).apply {
@@ -52,6 +58,19 @@ class MainDataFragment : Fragment() {
         }
 
         return root
+    }
+
+    private fun checkData(): Boolean {
+        val etFio = binding.etFio
+        val etDate = binding.etDateOfBirth
+
+        if (!etFio.text.isNullOrBlank() && !etDate.text.isNullOrBlank()) {
+            val table = FirstFormDAO(requireContext())
+            table.addNameAndBirth(etFio.text.toString(), etDate.text.toString())
+            return true
+        }
+
+        return false
     }
 
     private fun setTextWatcher(dateEditText: EditText): TextWatcher {
@@ -113,7 +132,7 @@ class MainDataFragment : Fragment() {
                             }
                         }
                         2 -> {
-                            val year = currText.toInt()
+                            val year = currText.substringBefore("\n").toInt()
                             if (year < 0) {
                                 dateEditText.setError("Введите корректную дату")
                                 return

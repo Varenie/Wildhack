@@ -26,6 +26,7 @@ class SkillsHelloFragment : Fragment() {
         binding.btnStartTest.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_skillsHelloFragment_to_your_self_skills)
         }
+
         return root
     }
 }
