@@ -105,7 +105,11 @@
         android:id="@+id/creativeQuestion"
         android:name="com.varenie.wildhack.ui.FirstForm.Creative.CreativeQuestionFragment"
         android:label="fragment_test_work_piece"
-        tools:layout="@layout/fragment_creative_question" />
+        tools:layout="@layout/fragment_creative_question" >
+        <action
+            android:id="@+id/action_creativeQuestion_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
     <fragment
         android:id="@+id/testPagerFragment"
         android:name="com.varenie.wildhack.ui.FirstForm.Test.TestPagerFragment"

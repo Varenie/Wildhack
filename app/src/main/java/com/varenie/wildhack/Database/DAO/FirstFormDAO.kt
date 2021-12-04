@@ -112,10 +112,9 @@ class FirstFormDAO(val context: Context) {
         db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
     }
 
-    fun addLvingPlacePrivacy(id: Int, livingPlace: String, isPrivacy: String) {
+    fun addLivingPlacePrivacy(id: Int, livingPlace: String) {
         val values = ContentValues().apply {
             put(COLUMN_city, livingPlace)
-            put(COLUMN_consent_to_data_collection, isPrivacy)
         }
 
         db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
@@ -150,9 +149,30 @@ class FirstFormDAO(val context: Context) {
     fun addHardSkills(id: Int, hardSkills: String) {
         val values = ContentValues().apply {
             put(COLUMN_about_your_hard_skills, hardSkills)
-
         }
 
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addCreative(id: Int, creative: ByteArray) {
+        val values = ContentValues().apply {
+            put(COLUMN_about_your_hard_skills, creative)
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addPublish(id: Int, isPublish:String) {
+        val values = ContentValues().apply {
+            put(COLUMN_consent_to_publish_creative, isPublish)
+        }
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addCollectionData(id: Int, isAgree: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_consent_to_data_collection, isAgree)
+        }
         db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
     }
 

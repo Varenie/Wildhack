@@ -1,11 +1,14 @@
 package com.varenie.wildhack.ui.FirstForm.Creative
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import com.varenie.wildhack.Database.DAO.FirstFormDAO
+import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentCreativeQuestionBinding
 
 class CreativeQuestionFragment : Fragment() {
@@ -38,6 +41,28 @@ class CreativeQuestionFragment : Fragment() {
         cbNo.setOnCheckedChangeListener { compoundButton, b ->
             if (cbNo.isChecked) {
                 cbYes.isChecked = false
+            }
+        }
+
+        binding.btnFinish.setOnClickListener {
+            cbYes.setOnCheckedChangeListener { compoundButton, b ->
+                var isPublish = false
+                if (b) {
+                    isPublish = true
+                }
+
+                val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
+                val id = sharedPref.getInt("FormId", 0)
+
+                with(sharedPref.edit()) {
+                    putBoolean("CreativeDone", true)
+                    apply()
+                }
+
+                val table = FirstFormDAO(requireContext())
+                table.addPublish(id, isPublish.toString())
+
+                Navigation.findNavController(it).navigate(R.id.action_creativeQuestion_to_checkFragment)
             }
         }
         return root

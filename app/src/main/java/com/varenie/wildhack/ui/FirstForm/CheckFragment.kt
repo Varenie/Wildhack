@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentCheckBinding
@@ -46,6 +47,10 @@ class CheckFragment : Fragment() {
             Navigation.findNavController(it).navigate(R.id.action_checkFragment_to_creativeFragment)
         }
 
+        binding.btnContinue.setOnClickListener {
+
+        }
+
         return root
     }
 
@@ -57,6 +62,7 @@ class CheckFragment : Fragment() {
         val aboutDone = sharedPref.getBoolean("AboutDone", false)
         val testDone = sharedPref.getBoolean("TestDone", false)
         val skillsDone = sharedPref.getBoolean("SkillsDone", false)
+        val creativeDone = sharedPref.getBoolean("CreativeDone", false)
 
         if (regDone) {
             binding.cbReg.isChecked = true
@@ -76,6 +82,15 @@ class CheckFragment : Fragment() {
         if (skillsDone) {
             binding.cbSkills.isChecked = true
             binding.llSkills.isClickable = false
+        }
+
+        if (creativeDone) {
+            binding.cbCreative.isChecked = true
+            binding.llCreative.isClickable = false
+        }
+
+        if (regDone && aboutDone && testDone && skillsDone && creativeDone) {
+            binding.btnContinue.isVisible = true
         }
     }
 

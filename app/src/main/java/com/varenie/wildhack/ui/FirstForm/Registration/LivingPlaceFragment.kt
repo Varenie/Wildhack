@@ -53,19 +53,13 @@ class LivingPlaceFragment : Fragment() {
         val etLivingPlace = binding.etLivingPlace
         val cbPrivacy = binding.privacyPolicy
 
-        if (!etLivingPlace.text.isNullOrBlank()) {
+        if (!etLivingPlace.text.isNullOrBlank() && cbPrivacy.isChecked) {
             val table = FirstFormDAO(requireContext())
-
-            val isPrivacy = if (cbPrivacy.isChecked) {
-                "true"
-            } else {
-                "false"
-            }
 
             val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
             val id = sharedPref.getInt("FormId", 0)
 
-            table.addLvingPlacePrivacy(id, etLivingPlace.text.toString(), isPrivacy)
+            table.addLivingPlacePrivacy(id, etLivingPlace.text.toString())
             return true
         }
 
