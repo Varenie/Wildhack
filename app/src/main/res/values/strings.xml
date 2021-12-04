@@ -54,6 +54,22 @@
     <string name="doing_example">Сфера деятельности, профессия, направление учёбы</string>
     <string name="doing_label">Чем ты занимаешься?</string>
     <string name="travel_experience">Какой у тебя походный опыт?</string>
-    <string name="question_distant_point">Какую самую дальнюю точку России ты посетил</string>
+    <string name="question_distant_point">Какую самую дальнюю точку России ты посетил?</string>
     <string name="point_label">Название</string>
+    <string name="complete">Ура, ты справился!</string>
+    <string name="complete_def">Мы обязательно свяжемся с тобой не позднее, чем за сутки до начала очередной смены, чтобы пригласить на занятия или предложить попробовать ещё раз в одну из следующих смен.\nСпасибо тебе, что так внимательно ответил на все вопросы!</string>
+    <string name="about_yourself">Сфера деятельности, проффесия, направление учёбы</string>
+    <string name="about_school">Откуда ты узнал о Школе?</string>
+    <string name="about_school_button">Продолжить</string>
+    <string name="social_network">Социальная сеть</string>
+    <string name="dobro_site">dobro.ru</string>
+    <string name="good_surfing">Goodsurfing</string>
+    <string name="green_board">Greenboard</string>
+    <string name="from_friends">от знакомых</string>
+    <string name="other">Другое:</string>
+    <string name="description_campaign_experience">Опиши свой походный опыт</string>
+    <string name="distant_place">Горный массив Вачкажец</string>
+    <string name="criteria_for_volunteering">По каким критериям ты выбираешь волонтерские проекты?</string>
+    <string name="criteria_for_job">Расскажи, пожалуйста, чем ты руководствовался при выборе ВУЗа/ будущей профессии?</string>
+    <string name="important_of_job">Что для тебя самое важное в твоей профессии? Почему ты занимаешься именно этим?</string>
 </resources>
