@@ -101,7 +101,7 @@ class FirstFormDAO(val context: Context) {
             }
     }
 
-    fun addMailSocilaPhone() {
+    fun addMailSocilaPhone(id: Int, email: String, socialnetwork: String, phone: String) {
 
     }
 

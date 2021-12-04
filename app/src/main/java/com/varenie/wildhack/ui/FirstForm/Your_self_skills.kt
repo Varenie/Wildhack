@@ -10,24 +10,25 @@ import androidx.recyclerview.widget.RecyclerView
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.ActivityMainBinding
 import com.varenie.wildhack.databinding.FragmentYourselfSkillsBinding
+import com.varenie.wildhack.ui.FirstForm.Skills.SkillsAdapter
 
 class Your_self_skills : Fragment() {
     lateinit var binding: FragmentYourselfSkillsBinding
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentYourselfSkillsBinding.inflate(inflater, container, false)
-        binding.rcView.setHasFixedSize(true)
+
         binding.rcView.layoutManager = LinearLayoutManager(requireContext())
-        binding.rcView.adapter = Skill_adapter()
+        binding.rcView.setHasFixedSize(true)
+        binding.rcView.adapter = SkillsAdapter()
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_yourself_skills, container, false)
+        return binding.root
     }
+
 
 
 
