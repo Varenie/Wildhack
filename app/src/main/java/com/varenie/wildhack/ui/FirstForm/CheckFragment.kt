@@ -23,10 +23,28 @@ class CheckFragment : Fragment() {
         _binding = FragmentCheckBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val reglayout = binding.llReg
-        reglayout.setOnClickListener {
+        val regLayout = binding.llReg
+        val aboutLayout = binding.llAboutOneself
+        val testLayout = binding.llTest
+        val skillsLayout = binding.llSkills
+        val creativeLayout = binding.llCreative
+
+        regLayout.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_checkFragment_to_navigation_main_data)
         }
+        aboutLayout.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_checkFragment_to_letsMeet)
+        }
+        testLayout.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_checkFragment_to_testHelloFragment)
+        }
+        skillsLayout.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_checkFragment_to_skillsHelloFragment)
+        }
+        creativeLayout.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_checkFragment_to_creativeFragment)
+        }
+
         return root
     }
 

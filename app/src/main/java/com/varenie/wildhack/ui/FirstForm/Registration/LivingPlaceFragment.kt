@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentLivingPlaceBinding
 
@@ -27,6 +28,12 @@ class LivingPlaceFragment : Fragment() {
 
         _binding = FragmentLivingPlaceBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        binding.btnBack.setOnClickListener {
+            Navigation.findNavController(it).apply {
+                popBackStack()
+            }
+        }
 
         return root
     }

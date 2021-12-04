@@ -44,4 +44,10 @@
     <string name="creative_description_1">Ответь сам себе: зачем тебе Школа защитников природы? Зачем ты Школе защитников природы? Что ты хочешь получить от обучения и от волонтёрской практики?</string>
     <string name="creative_description_2">Ответ запиши в форме видео (не более 2 минут), текста (до 5000 знаков), или презентации. Так же это может быть рисунок или ещё что-то творческое.</string>
     <string name="load_file">загрузить файл</string>
+    <string name="continue_text">Продолжить</string>
+    <string name="text_in_question_example">Здесь будет какой-то текст</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="finish">Завершить</string>
+    <string name="creqtive_question_text">Возможно, твой ответ на предыдущий вопрос (рисунок, видео, цитата из текста) нам захочется опубликовать в социальных сетях Школы. Ты даёшь нам такое право?</string>
 </resources>

@@ -45,6 +45,11 @@ class MainDataFragment : Fragment() {
         btnNext.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_navigation_main_data_to_navigation_connect)
         }
+        binding.btnBack.setOnClickListener {
+            Navigation.findNavController(it).apply {
+                popBackStack()
+            }
+        }
 
         return root
     }

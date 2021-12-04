@@ -53,6 +53,12 @@
         <action
             android:id="@+id/action_checkFragment_to_testHelloFragment"
             app:destination="@id/testHelloFragment" />
+        <action
+            android:id="@+id/action_checkFragment_to_skillsHelloFragment"
+            app:destination="@id/skillsHelloFragment" />
+        <action
+            android:id="@+id/action_checkFragment_to_creativeFragment"
+            app:destination="@id/creativeFragment" />
     </fragment>
     <fragment
         android:id="@+id/letsMeet"
@@ -63,5 +69,33 @@
         android:id="@+id/testHelloFragment"
         android:name="com.varenie.wildhack.ui.FirstForm.Test.TestHelloFragment"
         android:label="fragment_test_hello"
-        tools:layout="@layout/fragment_test_hello" />
+        tools:layout="@layout/fragment_test_hello" >
+        <action
+            android:id="@+id/action_testHelloFragment_to_testPagerFragment"
+            app:destination="@id/testPagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creativeFragment"
+        android:name="com.varenie.wildhack.ui.FirstForm.Creative.CreativeFragment"
+        android:label="fragment_creative"
+        tools:layout="@layout/fragment_creative" >
+        <action
+            android:id="@+id/action_creativeFragment_to_creativeQuestion"
+            app:destination="@id/creativeQuestion" />
+    </fragment>
+    <fragment
+        android:id="@+id/skillsHelloFragment"
+        android:name="com.varenie.wildhack.ui.FirstForm.Skills.SkillsHelloFragment"
+        android:label="fragment_skills_hello"
+        tools:layout="@layout/fragment_skills_hello" />
+    <fragment
+        android:id="@+id/creativeQuestion"
+        android:name="com.varenie.wildhack.ui.FirstForm.Creative.CreativeQuestionFragment"
+        android:label="fragment_test_work_piece"
+        tools:layout="@layout/fragment_creative_question" />
+    <fragment
+        android:id="@+id/testPagerFragment"
+        android:name="com.varenie.wildhack.ui.FirstForm.Test.TestPagerFragment"
+        android:label="fragment_test_pager"
+        tools:layout="@layout/fragment_test_pager" />
 </navigation>

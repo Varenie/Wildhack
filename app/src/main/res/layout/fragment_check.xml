@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:text="@string/text_in_check"
         android:textSize="35sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/content_end"
         app:layout_constraintHorizontal_bias="0.0"
@@ -165,8 +166,8 @@
         android:id="@+id/ll_creative"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="20dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/content_end"
         app:layout_constraintHorizontal_bias="0.0"
@@ -178,19 +179,34 @@
             android:id="@+id/cb_creative"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="0.9"
             android:button="@drawable/my_checkbox"
-            android:text="@string/creative"
             android:clickable="false"
-            android:textSize="25sp"
-            android:layout_weight="0.9"/>
+            android:text="@string/creative"
+            android:textSize="25sp" />
 
         <ImageView
             android:id="@+id/iv_creative"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow_forward_40"
-            android:layout_weight="0.1"/>
+            android:layout_weight="0.1"
+            android:src="@drawable/ic_arrow_forward_40" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/continue_text"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/content_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/content_start"
+        app:layout_constraintTop_toBottomOf="@+id/ll_creative"
+        app:layout_constraintVertical_bias="0.098" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

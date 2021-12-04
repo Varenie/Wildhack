@@ -32,6 +32,11 @@ class ConnectFragment : Fragment() {
         btnNext.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_navigation_connect_to_navigation_living_place)
         }
+        binding.btnBack.setOnClickListener {
+            Navigation.findNavController(it).apply {
+                popBackStack()
+            }
+        }
 
         return root
     }
