@@ -26,7 +26,7 @@ class Your_self_skills : Fragment() {
         binding.rcView.adapter = Skill_adapter()
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_yourself_skills, container, false)
+        return binding.root
     }
 
 

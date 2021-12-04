@@ -67,9 +67,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="@id/content_end"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="100dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/content_start"
         tools:layout_editor_absoluteX="1dp" />
+    <Button
+        android:id="@+id/btn_save_and_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/ic_arrow_forward_30"
+        android:text="@string/save"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/content_end"
+        app:layout_constraintTop_toBottomOf="@+id/rcView"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
