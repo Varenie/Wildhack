@@ -1,4 +1,4 @@
-package com.varenie.wildhack.ui.FirstForm.Skills
+package com.varenie.wildhack.ui.FirstForm.Registration
 
 import android.content.Context
 import android.os.Bundle
@@ -9,9 +9,8 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentSaveRegAnswersBinding
-import com.varenie.wildhack.databinding.FragmentSkillsHelloBinding
 
-class save_skills_answers : Fragment() {
+class Save_skills_answers : Fragment() {
     private var _binding: FragmentSaveRegAnswersBinding? = null
 
     // This property is only valid between onCreateView and

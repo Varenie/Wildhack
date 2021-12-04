@@ -147,6 +147,15 @@ class FirstFormDAO(val context: Context) {
         db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
     }
 
+    fun addHardSkills(id: Int, hardSkills: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_about_your_hard_skills, hardSkills)
+
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
     fun checkDB() {
         cursor = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
         cursor.moveToFirst()

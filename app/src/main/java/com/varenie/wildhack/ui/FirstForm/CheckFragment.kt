@@ -56,6 +56,7 @@ class CheckFragment : Fragment() {
         val regDone = sharedPref.getBoolean("RegDone", false)
         val aboutDone = sharedPref.getBoolean("AboutDone", false)
         val testDone = sharedPref.getBoolean("TestDone", false)
+        val skillsDone = sharedPref.getBoolean("SkillsDone", false)
 
         if (regDone) {
             binding.cbReg.isChecked = true
@@ -70,6 +71,11 @@ class CheckFragment : Fragment() {
         if (testDone) {
             binding.cbTest.isChecked = true
             binding.llTest.isClickable = false
+        }
+
+        if (skillsDone) {
+            binding.cbSkills.isChecked = true
+            binding.llSkills.isClickable = false
         }
     }
 

@@ -1,5 +1,6 @@
 package com.varenie.wildhack.ui.FirstForm
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.CheckBox
 import androidx.recyclerview.widget.RecyclerView
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.SkillItemBinding
+import java.lang.reflect.Array
 
 class SkillsAdapter:RecyclerView.Adapter<SkillsAdapter.Skill_Holder>() {
     val skill_list = arrayOf("Умею рисовать или занимаюсь каким-то рукоделием, вижу мир как художник",
@@ -22,17 +24,32 @@ class SkillsAdapter:RecyclerView.Adapter<SkillsAdapter.Skill_Holder>() {
         "Имею допуск к работе с бензопилой",
         "Свободно говорю на английском"
     )
-    class Skill_Holder(item: View): RecyclerView.ViewHolder(item) {
+
+    val resultArray = arrayListOf<String>()
+    class Skill_Holder(item: View, val resultArray: ArrayList<String>): RecyclerView.ViewHolder(item) {
         //val binding = SkillItemBinding.bind(item)
         val cbSkills = item.findViewById<CheckBox>(R.id.cb_skills)
         fun bind(skill: String){
             cbSkills.text=skill
+
+            cbSkills.setOnCheckedChangeListener { compoundButton, b ->
+                when(b) {
+                    true -> resultArray.add(skill)
+                    false -> {
+                        for (item in resultArray) {
+                            if (skill.compareTo(item) ==0){
+                                resultArray.remove(skill)
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Skill_Holder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.skill_item, parent,false)
-        return Skill_Holder(view)
+        return Skill_Holder(view, resultArray)
     }
 
     override fun onBindViewHolder(holder: Skill_Holder, position: Int) {
@@ -41,6 +58,17 @@ class SkillsAdapter:RecyclerView.Adapter<SkillsAdapter.Skill_Holder>() {
 
     override fun getItemCount(): Int {
         return skill_list.size
+    }
+
+    fun getResult(): String {
+        var result = ""
+
+        for (item in resultArray) {
+            result = "$item;$result"
+        }
+
+        Log.d("MYCHECK", result)
+        return result
     }
 
 }
