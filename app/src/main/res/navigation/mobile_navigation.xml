@@ -91,7 +91,11 @@
         android:id="@+id/skillsHelloFragment"
         android:name="com.varenie.wildhack.ui.FirstForm.Skills.SkillsHelloFragment"
         android:label="fragment_skills_hello"
-        tools:layout="@layout/fragment_skills_hello" />
+        tools:layout="@layout/fragment_skills_hello" >
+        <action
+            android:id="@+id/action_skillsHelloFragment_to_your_self_skills"
+            app:destination="@id/your_self_skills" />
+    </fragment>
     <fragment
         android:id="@+id/creativeQuestion"
         android:name="com.varenie.wildhack.ui.FirstForm.Creative.CreativeQuestionFragment"
@@ -107,4 +111,9 @@
         android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.LetsMeetPagerFragment"
         android:label="fragment_lets_meet_pager"
         tools:layout="@layout/fragment_lets_meet_pager" />
+    <fragment
+        android:id="@+id/your_self_skills"
+        android:name="com.varenie.wildhack.ui.FirstForm.Your_self_skills"
+        android:label="fragment_yourself_skills"
+        tools:layout="@layout/fragment_yourself_skills" />
 </navigation>

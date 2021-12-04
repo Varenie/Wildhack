@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentLetsMeetBinding
 import com.varenie.wildhack.databinding.FragmentSkillsHelloBinding
@@ -20,8 +21,11 @@ class SkillsHelloFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSkillsHelloBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
+        val root: View = binding.root
+        binding.btnStartTest.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_skillsHelloFragment_to_your_self_skills)
+        }
         return root
     }
 }
