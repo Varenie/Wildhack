@@ -29,12 +29,14 @@
     <string name="privacy_policy">Я согласен с <u>политикой использования перснональных данных</u></string>
     <string name="text_in_check">Лалала</string>
     <string name="about_oneself">Рассказать о себе</string>
-    <string name="test">Пройти тест</string>
+    <string name="test_text">Пройти тест</string>
     <string name="skills">Указать свои навыки</string>
     <string name="creative">Творческое задание</string>
     <string name="let_meet">Давайте познакомимся</string>
     <string name="meet_description_1">Вам предстоит рассказать о себе и своем походном опыте, заполнив форму.</string>
     <string name="meet_description_2">Нам это нужно, чтобы выбрать лучших кандидатов.</string>
     <string name="start_test">Начать тестирование</string>
+    <string name="Test">Тест</string>
+    <string name="test_description">Здесь будут представлены вопросы, которые помогут нам понять в какой роли вам будет комфортней всего. Пожайлуста, отвечайте честно</string>
 
 </resources>

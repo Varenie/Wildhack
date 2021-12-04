@@ -115,7 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:button="@drawable/my_checkbox"
-            android:text="@string/test"
+            android:text="@string/test_text"
             android:clickable="false"
             android:textSize="25sp"
             android:layout_weight="0.9"/>

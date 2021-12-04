@@ -50,10 +50,18 @@
         <action
             android:id="@+id/action_checkFragment_to_letsMeet"
             app:destination="@id/letsMeet" />
+        <action
+            android:id="@+id/action_checkFragment_to_testHelloFragment"
+            app:destination="@id/testHelloFragment" />
     </fragment>
     <fragment
         android:id="@+id/letsMeet"
         android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.LetsMeet"
         android:label="fragment_lets_meet"
         tools:layout="@layout/fragment_lets_meet" />
+    <fragment
+        android:id="@+id/testHelloFragment"
+        android:name="com.varenie.wildhack.ui.FirstForm.Test.TestHelloFragment"
+        android:label="fragment_test_hello"
+        tools:layout="@layout/fragment_test_hello" />
 </navigation>
