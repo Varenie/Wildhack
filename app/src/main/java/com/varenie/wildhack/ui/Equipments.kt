@@ -10,7 +10,7 @@ import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentEquipmentsBinding
 
 
-class equipments : Fragment() {
+class Equipments : Fragment() {
     private var _binding: FragmentEquipmentsBinding? = null
 
     // This property is only valid between onCreateView and

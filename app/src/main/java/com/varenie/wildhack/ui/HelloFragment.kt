@@ -45,6 +45,12 @@ class HelloFragment : Fragment() {
         binding.llReg2.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_helloFragment_to_equipments)
         }
+        binding.llReg3.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_helloFragment_to_documents)
+        }
+        binding.llReg4.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_helloFragment_to_acommodation_options)
+        }
         return root
     }
 
