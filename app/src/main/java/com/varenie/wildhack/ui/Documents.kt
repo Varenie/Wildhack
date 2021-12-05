@@ -25,9 +25,7 @@ class Documents : Fragment() {
         val root: View = binding.root
         // Inflate the layout for this fragment
         binding.btnBack.setOnClickListener {
-            Navigation.findNavController(it).apply {
-                popBackStack()
-            }
+            Navigation.findNavController(it).apply { popBackStack() }
         }
         return root
     }
