@@ -8,7 +8,7 @@ class FirstFormDBHelper(context: Context): SQLiteOpenHelper(context, DB_NAME, nu
 
     companion object {
         val DB_NAME = "FirstForm.db"
-        val DB_VERSION = 1
+        val DB_VERSION = 2
 
         val TABLE_NAME = "FirstForm"
         val COLUMN_id = "_id"
@@ -68,7 +68,7 @@ class FirstFormDBHelper(context: Context): SQLiteOpenHelper(context, DB_NAME, nu
                 "$COLUMN_action_in_conflict TEXT," +
                 "$COLUMN_about_your_soft_skills TEXT," +
                 "$COLUMN_about_your_hard_skills TEXT," +
-                "$COLUMN_creative_material TEXT," +
+                "$COLUMN_creative_material BLOB," +
                 "$COLUMN_consent_to_publish_creative TEXT," +
                 "$COLUMN_how_find_school TEXT," +
                 "$COLUMN_consent_to_data_collection TEXT);")

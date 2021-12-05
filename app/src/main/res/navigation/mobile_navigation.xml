@@ -29,7 +29,11 @@
         android:id="@+id/navigation_living_place"
         android:name="com.varenie.wildhack.ui.FirstForm.Registration.LivingPlaceFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_living_place" />
+        tools:layout="@layout/fragment_living_place" >
+        <action
+            android:id="@+id/action_navigation_living_place_to_save_skills_answers"
+            app:destination="@id/save_skills_answers" />
+    </fragment>
     <fragment
         android:id="@+id/helloFragment"
         android:name="com.varenie.wildhack.ui.HelloFragment"
@@ -59,15 +63,19 @@
         <action
             android:id="@+id/action_checkFragment_to_creativeFragment"
             app:destination="@id/creativeFragment" />
+        <action
+            android:id="@+id/action_checkFragment_to_about_the_school"
+            app:destination="@id/about_the_school" />
     </fragment>
     <fragment
         android:id="@+id/letsMeet"
         android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.LetsMeet"
         android:label="fragment_lets_meet"
         tools:layout="@layout/fragment_lets_meet" >
+
         <action
-            android:id="@+id/action_letsMeet_to_letsMeetPagerFragment"
-            app:destination="@id/letsMeetPagerFragment" />
+            android:id="@+id/action_letsMeet_to_firstPage"
+            app:destination="@id/firstPage" />
     </fragment>
     <fragment
         android:id="@+id/testHelloFragment"
@@ -100,20 +108,92 @@
         android:id="@+id/creativeQuestion"
         android:name="com.varenie.wildhack.ui.FirstForm.Creative.CreativeQuestionFragment"
         android:label="fragment_test_work_piece"
-        tools:layout="@layout/fragment_creative_question" />
+        tools:layout="@layout/fragment_creative_question" >
+        <action
+            android:id="@+id/action_creativeQuestion_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
     <fragment
         android:id="@+id/testPagerFragment"
         android:name="com.varenie.wildhack.ui.FirstForm.Test.TestPagerFragment"
         android:label="fragment_test_pager"
-        tools:layout="@layout/fragment_test_pager" />
-    <fragment
-        android:id="@+id/letsMeetPagerFragment"
-        android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.LetsMeetPagerFragment"
-        android:label="fragment_lets_meet_pager"
-        tools:layout="@layout/fragment_lets_meet_pager" />
+        tools:layout="@layout/fragment_test_pager" >
+        <action
+            android:id="@+id/action_testPagerFragment_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
     <fragment
         android:id="@+id/your_self_skills"
-        android:name="com.varenie.wildhack.ui.FirstForm.Your_self_skills"
+        android:name="com.varenie.wildhack.ui.FirstForm.Skills.Your_self_skills"
         android:label="fragment_yourself_skills"
-        tools:layout="@layout/fragment_yourself_skills" />
+        tools:layout="@layout/fragment_yourself_skills" >
+        <action
+            android:id="@+id/action_your_self_skills_to_other_skills"
+            app:destination="@id/other_skills" />
+    </fragment>
+    <fragment
+        android:id="@+id/save_skills_answers"
+        android:name="com.varenie.wildhack.ui.FirstForm.Registration.Save_skills_answers"
+        android:label="fragment_save_reg_answers"
+        tools:layout="@layout/fragment_save_reg_answers" >
+        <action
+            android:id="@+id/action_save_skills_answers_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstPage"
+        android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.FirstPage"
+        android:label="FirstPage" >
+        <action
+            android:id="@+id/action_firstPage_to_secondPage"
+            app:destination="@id/secondPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondPage"
+        android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.SecondPage"
+        android:label="SecondPage" >
+        <action
+            android:id="@+id/action_secondPage_to_thirdPage"
+            app:destination="@id/thirdPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdPage"
+        android:name="com.varenie.wildhack.ui.FirstForm.AboutOneself.ThirdPage"
+        android:label="ThirdPage" >
+        <action
+            android:id="@+id/action_thirdPage_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/other_skills"
+        android:name="com.varenie.wildhack.ui.FirstForm.Skills.Other_skills"
+        android:label="fragment_other_skills"
+        tools:layout="@layout/fragment_other_skills" >
+        <action
+            android:id="@+id/action_other_skills_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/about_the_school"
+        android:name="com.varenie.wildhack.ui.FirstForm.About_the_school"
+        android:label="fragment_about_the_school"
+        tools:layout="@layout/fragment_about_the_school" >
+        <action
+            android:id="@+id/action_about_the_school_to_dataAgreement"
+            app:destination="@id/dataAgreement" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataAgreement"
+        android:name="com.varenie.wildhack.ui.FirstForm.DataAgreement"
+        android:label="fragment_data_agreement"
+        tools:layout="@layout/fragment_data_agreement" >
+        <action
+            android:id="@+id/action_dataAgreement_to_complete"
+            app:destination="@id/complete" />
+    </fragment>
+    <fragment
+        android:id="@+id/complete"
+        android:name="com.varenie.wildhack.ui.FirstForm.Complete"
+        android:label="fragment_comlete"
+        tools:layout="@layout/fragment_comlete" />
 </navigation>

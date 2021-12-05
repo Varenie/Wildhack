@@ -130,6 +130,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputLayout"
             android:minLines="4"
             android:inputType="textMultiLine|textCapSentences"
             android:maxLength="500"

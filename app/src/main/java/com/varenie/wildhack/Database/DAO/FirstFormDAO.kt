@@ -76,6 +76,7 @@ class FirstFormDAO(val context: Context) {
 
     fun addNameAndBirth(fio: String, birth: String) {
         val fioArr = fio.split(" ")
+        //подумать
         val lastName = fioArr[0]
         val firstName = fioArr[1]
         val middleName = fioArr[2]
@@ -102,7 +103,84 @@ class FirstFormDAO(val context: Context) {
     }
 
     fun addMailSocilaPhone(id: Int, email: String, socialnetwork: String, phone: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_e_mail, email)
+            put(COLUMN_socialnetwork, socialnetwork)
+            put(COLUMN_phone_number, phone)
+        }
 
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addLivingPlacePrivacy(id: Int, livingPlace: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_city, livingPlace)
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addProfession(id: Int, profession: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_profession, profession)
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addPointExperience(id: Int, distantPoint: String, experience: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_fathest_point_in_russia, distantPoint)
+            put(COLUMN_camping_experience, experience)
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addCriteriaProject(id: Int, criteria: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_criteria_of_volunteer_projects, criteria)
+
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addHardSkills(id: Int, hardSkills: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_about_your_hard_skills, hardSkills)
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addCreative(id: Int, creative: ByteArray) {
+        val values = ContentValues().apply {
+            put(COLUMN_about_your_hard_skills, creative)
+        }
+
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addPublish(id: Int, isPublish:String) {
+        val values = ContentValues().apply {
+            put(COLUMN_consent_to_publish_creative, isPublish)
+        }
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addAboutSchool(id: Int, responce: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_how_find_school, responce)
+        }
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun addCollectionData(id: Int, isAgree: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_consent_to_data_collection, isAgree)
+        }
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
     }
 
     fun checkDB() {
@@ -114,6 +192,11 @@ class FirstFormDAO(val context: Context) {
         Log.i(TAG, cursor.getString(indexLastName))
         Log.i(TAG, cursor.getString(indexMiddleName))
         Log.i(TAG, cursor.getString(indexBirth))
+//        Log.i(TAG, cursor.getString(indexEmail))
+//        Log.i(TAG, cursor.getString(indexSocialNetwork))
+//        Log.i(TAG, cursor.getString(indexPhone))
+//        Log.i(TAG, cursor.getString(indexCity))
+//        Log.i(TAG, cursor.getString(indexIsCanCollectData))
     }
 
 }
