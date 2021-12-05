@@ -29,7 +29,7 @@
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/drawable/ic_unchecked.xml" value="0.29375" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/drawable/my_checkbox.xml" value="0.29375" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/activity_main.xml" value="0.24909420289855072" />
-        <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/chapter_list.xml" value="0.28541666666666665" />
+        <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/chapter_list.xml" value="0.1" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragment_about_the_school.xml" value="0.2630208333333333" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragment_check.xml" value="0.24909420289855072" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragment_comlete.xml" value="0.2630208333333333" />
@@ -39,6 +39,7 @@
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragment_creative_question.xml" value="0.3188405797101449" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragment_faq.xml" value="0.28541666666666665" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragment_fifth_page.xml" value="0.3625" />
+        <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragment_final_test.xml" value="0.25" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragment_first_page.xml" value="0.3188405797101449" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragment_fourth_page.xml" value="0.3625" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragment_hello.xml" value="0.2630208333333333" />
@@ -62,6 +63,7 @@
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragment_yourself_skills.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragmet_complete.xml" value="0.25" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/fragmet_complite.xml" value="0.146875" />
+        <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/item_page.xml" value="0.1" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/skill_item.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/skills_list.xml" value="0.33" />
         <entry key="..\:/Users/mihai/AndroidStudioProjects/Wildhack/app/src/main/res/layout/topics_list.xml" value="0.28541666666666665" />
