@@ -36,7 +36,7 @@ class tutorials : Fragment() {
             Navigation.findNavController(it).navigate(R.id.action_tutorials_to_lesson1)
         }
 
-        binding.llReg2.setOnClickListener {
+        binding.llReg3.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_tutorials_to_lesson1)
         }
 
