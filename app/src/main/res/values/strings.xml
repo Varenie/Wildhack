@@ -103,4 +103,7 @@
     <string name="item_page_q">Я всегда держусь своих принципов и убеждений.</string>
     <string name="collection_data">Ты даешь нам право на сбор и обработку твоих персональных данных</string>
     <string name="Ok">ок</string>
+    <string name="tv_eq1">Первое</string>
+    <string name="tv_eq2">Второе</string>
+    <string name="tv_eq3">Третье</string>
 </resources>
