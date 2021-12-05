@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.varenie.wildhack.R
 import com.varenie.wildhack.databinding.FragmentDataAgreementBinding
 import com.varenie.wildhack.databinding.FragmentFaqBinding
@@ -22,6 +23,11 @@ class faq : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentFaqBinding.inflate(inflater, container, false)
+
+        binding.btnBack.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_faq_to_helloFragment)
+        }
+
         header.add("Вопрос 1")
         header.add("Вопрос 2")
         header.add("Вопрос 3")

@@ -45,6 +45,9 @@
         <action
             android:id="@+id/action_helloFragment_to_faq"
             app:destination="@id/faq" />
+        <action
+            android:id="@+id/action_helloFragment_to_equipments"
+            app:destination="@id/equipments" />
     </fragment>
     <fragment
         android:id="@+id/checkFragment"
@@ -203,5 +206,18 @@
         android:id="@+id/faq"
         android:name="com.varenie.wildhack.ui.faq"
         android:label="fragment_faq"
-        tools:layout="@layout/fragment_faq" />
+        tools:layout="@layout/fragment_faq" >
+        <action
+            android:id="@+id/action_faq_to_helloFragment"
+            app:destination="@id/helloFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/equipments"
+        android:name="com.varenie.wildhack.ui.equipments"
+        android:label="fragment_equipments"
+        tools:layout="@layout/fragment_equipments" >
+        <action
+            android:id="@+id/action_equipments_to_helloFragment"
+            app:destination="@id/helloFragment" />
+    </fragment>
 </navigation>
