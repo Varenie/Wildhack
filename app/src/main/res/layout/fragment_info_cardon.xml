@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Faq">
+    tools:context=".ui.InfoCardon">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/content_start"
@@ -37,7 +37,7 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/faq_ex"
+        android:text="@string/info_cardon"
         android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"

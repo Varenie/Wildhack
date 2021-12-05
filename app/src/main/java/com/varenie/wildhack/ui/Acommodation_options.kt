@@ -25,8 +25,9 @@ class Acommodation_options : Fragment() {
         _binding = FragmentAcommodationOptionsBinding.inflate(inflater, container, false)
         val root: View = binding.root
         // Inflate the layout for this fragment
+
         binding.btnBack.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_acommodation_options_to_helloFragment)
+            Navigation.findNavController(it).apply { popBackStack() }
         }
         return root
     }

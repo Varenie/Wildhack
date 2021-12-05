@@ -51,6 +51,9 @@ class HelloFragment : Fragment() {
         binding.llReg4.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_helloFragment_to_acommodation_options)
         }
+        binding.llReg5.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_helloFragment_to_infoCardon)
+        }
         return root
     }
 

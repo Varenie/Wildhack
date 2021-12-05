@@ -23,7 +23,7 @@ class Equipments : Fragment() {
         _binding = FragmentEquipmentsBinding.inflate(inflater, container, false)
 
         binding.btnBack.setOnClickListener{
-            Navigation.findNavController(it).navigate(R.id.action_equipments_to_helloFragment)
+            Navigation.findNavController(it).apply { popBackStack() }
         }
 
         return binding.root

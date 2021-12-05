@@ -57,6 +57,9 @@
         <action
             android:id="@+id/action_helloFragment_to_acommodation_options"
             app:destination="@id/acommodation_options" />
+        <action
+            android:id="@+id/action_helloFragment_to_infoCardon"
+            app:destination="@id/infoCardon" />
     </fragment>
     <fragment
         android:id="@+id/checkFragment"
@@ -254,6 +257,15 @@
         tools:layout="@layout/fragment_acommodation_options" >
         <action
             android:id="@+id/action_acommodation_options_to_helloFragment"
+            app:destination="@id/helloFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoCardon"
+        android:name="com.varenie.wildhack.ui.InfoCardon"
+        android:label="fragment_info_cardon"
+        tools:layout="@layout/fragment_info_cardon" >
+        <action
+            android:id="@+id/action_infoCardon_to_helloFragment"
             app:destination="@id/helloFragment" />
     </fragment>
 </navigation>
