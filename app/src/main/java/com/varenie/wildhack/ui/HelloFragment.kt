@@ -28,7 +28,9 @@ class HelloFragment : Fragment() {
         btnStart.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_helloFragment_to_checkFragment)
         }
-
+        binding.llReg1.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_helloFragment_to_faq)
+        }
         return root
     }
 
