@@ -51,6 +51,12 @@
         <action
             android:id="@+id/action_helloFragment_to_tutorials"
             app:destination="@id/tutorials" />
+        <action
+            android:id="@+id/action_helloFragment_to_acommodation_options"
+            app:destination="@id/acommodation_options" />
+        <action
+            android:id="@+id/action_helloFragment_to_documents"
+            app:destination="@id/documents" />
     </fragment>
     <fragment
         android:id="@+id/checkFragment"
@@ -211,7 +217,7 @@
     </fragment>
     <fragment
         android:id="@+id/faq"
-        android:name="com.varenie.wildhack.ui.faq"
+        android:name="com.varenie.wildhack.ui.Faq"
         android:label="fragment_faq"
         tools:layout="@layout/fragment_faq" >
         <action
@@ -220,7 +226,7 @@
     </fragment>
     <fragment
         android:id="@+id/equipments"
-        android:name="com.varenie.wildhack.ui.equipments"
+        android:name="com.varenie.wildhack.ui.Equipments"
         android:label="fragment_equipments"
         tools:layout="@layout/fragment_equipments" >
         <action
@@ -249,4 +255,14 @@
             android:id="@+id/action_tutorials_to_final_test"
             app:destination="@id/final_test" />
     </fragment>
+    <fragment
+        android:id="@+id/acommodation_options"
+        android:name="com.varenie.wildhack.ui.Acommodation_options"
+        android:label="fragment_acommodation_options"
+        tools:layout="@layout/fragment_acommodation_options" />
+    <fragment
+        android:id="@+id/documents"
+        android:name="com.varenie.wildhack.ui.Documents"
+        android:label="fragment_documents"
+        tools:layout="@layout/fragment_documents" />
 </navigation>

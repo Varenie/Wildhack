@@ -34,6 +34,7 @@ import com.varenie.wildhack.Database.FirstFormDBHelper.Companion.COLUMN_team_sit
 import com.varenie.wildhack.Database.FirstFormDBHelper.Companion.COLUMN_the_most_important_in_job
 import com.varenie.wildhack.Database.FirstFormDBHelper.Companion.COLUMN_username
 import com.varenie.wildhack.Database.FirstFormDBHelper.Companion.TABLE_NAME
+import kotlin.random.Random
 
 
 class FirstFormDAO(val context: Context) {
@@ -157,7 +158,7 @@ class FirstFormDAO(val context: Context) {
 
     fun addCreative(id: Int, creative: String) {
         val values = ContentValues().apply {
-            put(COLUMN_about_your_hard_skills, creative)
+            put(COLUMN_creative_material, creative)
         }
 
         db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
@@ -189,7 +190,7 @@ class FirstFormDAO(val context: Context) {
         cursor.moveToFirst()
 
         return FirstForm(
-            cursor.getInt(indexId),
+            Random.nextInt(0,100_000),
             cursor.getString(indexName),
             cursor.getString(indexLastName),
             cursor.getString(indexMiddleName),
@@ -212,7 +213,7 @@ class FirstFormDAO(val context: Context) {
             "",
             "",
             cursor.getString(indexHardSkills),
-            "",
+            cursor.getString(indexCretive),
             cursor.getString(indexIsCanPublish),
             cursor.getString(indexHowFindSchool),
             cursor.getString(indexIsCanCollectData)

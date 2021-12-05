@@ -28,7 +28,7 @@ data class FirstForm(
     val action_in_conflict: String,
     val about_your_soft_skills: String,
 
-    val about_your_hard_skills: String,
+    val about_your_hard_skills_check_boxes_second: String,
     val creative_material: String,
     val consent_to_publish_creative: String,
     val how_find_school: String,

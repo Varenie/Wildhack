@@ -45,25 +45,23 @@ class CreativeQuestionFragment : Fragment() {
         }
 
         binding.btnFinish.setOnClickListener {
-            cbYes.setOnCheckedChangeListener { compoundButton, b ->
-                var isPublish = false
-                if (b) {
-                    isPublish = true
-                }
+            var isPublish = false
+            if(cbYes.isChecked)
+                isPublish = true
 
-                val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
-                val id = sharedPref.getInt("FormId", 0)
+            val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
+            val id = sharedPref.getInt("FormId", 0)
 
-                with(sharedPref.edit()) {
-                    putBoolean("CreativeDone", true)
-                    apply()
-                }
-
-                val table = FirstFormDAO(requireContext())
-                table.addPublish(id, isPublish.toString())
-
-                Navigation.findNavController(it).navigate(R.id.action_creativeQuestion_to_checkFragment)
+            with(sharedPref.edit()) {
+                putBoolean("CreativeDone", true)
+                apply()
             }
+
+            val table = FirstFormDAO(requireContext())
+            table.addPublish(id, isPublish.toString())
+
+            Navigation.findNavController(it).navigate(R.id.action_creativeQuestion_to_checkFragment)
+
         }
         return root
     }
