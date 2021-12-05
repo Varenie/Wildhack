@@ -49,10 +49,11 @@
         app:layout_constraintVertical_bias="0.177" />
 
     <LinearLayout
+
         android:id="@+id/ll_eq_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/content_start"
@@ -62,7 +63,7 @@
         >
 
         <TextView
-            android:text="@string/document_1"
+            android:text="Паспорт"
             android:id="@+id/tv_title1"
             android:textSize="20sp"
             android:textColor="@color/black"
@@ -86,7 +87,7 @@
         >
 
         <TextView
-            android:text="@string/document_2"
+            android:text="Справко о вакцинировании"
             android:id="@+id/tv_title2"
             android:textSize="20sp"
             android:textColor="@color/black"
@@ -110,7 +111,7 @@
         >
 
         <TextView
-            android:text="@string/document_3"
+            android:text="Договор о добровольческой \nдеятельности"
             android:id="@+id/tv_title3"
             android:textSize="20sp"
             android:textColor="@color/black"
