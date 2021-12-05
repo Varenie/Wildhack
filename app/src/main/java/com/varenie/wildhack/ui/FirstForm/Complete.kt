@@ -1,11 +1,13 @@
 package com.varenie.wildhack.ui.FirstForm
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation
 import com.varenie.wildhack.Database.DAO.FirstFormDAO
 import com.varenie.wildhack.Database.Entities.FirstForm
 import com.varenie.wildhack.Network.Common
@@ -40,7 +42,14 @@ class Complete : Fragment() {
             val table = FirstFormDAO(requireContext())
             val form = table.getForm()
 
+            val sharedPref = requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
+            with(sharedPref.edit()) {
+                putBoolean("FirstFormDone", true)
+                apply()
+            }
             uploadForm(form)
+
+            Navigation.findNavController(it).navigate(R.id.action_complete_to_helloFragment)
         }
         return root
     }

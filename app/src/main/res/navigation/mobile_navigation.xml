@@ -45,6 +45,9 @@
         <action
             android:id="@+id/action_helloFragment_to_faq"
             app:destination="@id/faq" />
+        <action
+            android:id="@+id/action_helloFragment_to_tutorials"
+            app:destination="@id/tutorials" />
     </fragment>
     <fragment
         android:id="@+id/checkFragment"
@@ -198,10 +201,19 @@
         android:id="@+id/complete"
         android:name="com.varenie.wildhack.ui.FirstForm.Complete"
         android:label="fragment_comlete"
-        tools:layout="@layout/fragment_comlete" />
+        tools:layout="@layout/fragment_comlete" >
+        <action
+            android:id="@+id/action_complete_to_helloFragment"
+            app:destination="@id/helloFragment" />
+    </fragment>
     <fragment
         android:id="@+id/faq"
         android:name="com.varenie.wildhack.ui.faq"
         android:label="fragment_faq"
         tools:layout="@layout/fragment_faq" />
+    <fragment
+        android:id="@+id/tutorials"
+        android:name="com.varenie.wildhack.ui.Course.tutorials"
+        android:label="fragment_tutorials"
+        tools:layout="@layout/fragment_tutorials" />
 </navigation>
