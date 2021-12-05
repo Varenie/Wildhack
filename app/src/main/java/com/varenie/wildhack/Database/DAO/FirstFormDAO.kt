@@ -169,6 +169,13 @@ class FirstFormDAO(val context: Context) {
         db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
     }
 
+    fun addAboutSchool(id: Int, responce: String) {
+        val values = ContentValues().apply {
+            put(COLUMN_how_find_school, responce)
+        }
+        db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
     fun addCollectionData(id: Int, isAgree: String) {
         val values = ContentValues().apply {
             put(COLUMN_consent_to_data_collection, isAgree)

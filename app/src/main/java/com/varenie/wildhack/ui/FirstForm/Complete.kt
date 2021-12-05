@@ -1,4 +1,4 @@
-package com.varenie.wildhack.ui.FirstForm.Registration
+package com.varenie.wildhack.ui.FirstForm
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

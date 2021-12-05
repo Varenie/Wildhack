@@ -48,7 +48,7 @@ class CheckFragment : Fragment() {
         }
 
         binding.btnContinue.setOnClickListener {
-
+            Navigation.findNavController(it).navigate(R.id.action_checkFragment_to_about_the_school)
         }
 
         return root

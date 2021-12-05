@@ -63,6 +63,9 @@
         <action
             android:id="@+id/action_checkFragment_to_creativeFragment"
             app:destination="@id/creativeFragment" />
+        <action
+            android:id="@+id/action_checkFragment_to_about_the_school"
+            app:destination="@id/about_the_school" />
     </fragment>
     <fragment
         android:id="@+id/letsMeet"
@@ -170,4 +173,27 @@
             android:id="@+id/action_other_skills_to_checkFragment"
             app:destination="@id/checkFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/about_the_school"
+        android:name="com.varenie.wildhack.ui.FirstForm.About_the_school"
+        android:label="fragment_about_the_school"
+        tools:layout="@layout/fragment_about_the_school" >
+        <action
+            android:id="@+id/action_about_the_school_to_dataAgreement"
+            app:destination="@id/dataAgreement" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataAgreement"
+        android:name="com.varenie.wildhack.ui.FirstForm.DataAgreement"
+        android:label="fragment_data_agreement"
+        tools:layout="@layout/fragment_data_agreement" >
+        <action
+            android:id="@+id/action_dataAgreement_to_complete"
+            app:destination="@id/complete" />
+    </fragment>
+    <fragment
+        android:id="@+id/complete"
+        android:name="com.varenie.wildhack.ui.FirstForm.Complete"
+        android:label="fragment_comlete"
+        tools:layout="@layout/fragment_comlete" />
 </navigation>
