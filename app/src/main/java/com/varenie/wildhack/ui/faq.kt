@@ -7,45 +7,38 @@ import android.view.ViewGroup
 import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
 import com.varenie.wildhack.R
+import com.varenie.wildhack.databinding.FragmentDataAgreementBinding
+import com.varenie.wildhack.databinding.FragmentFaqBinding
+import com.varenie.wildhack.databinding.FragmentFinalTestBinding
 
 
 class faq : Fragment() {
-    private lateinit var listViewAdapter: eListViewAdapter
-    private lateinit var chapterList: List<String>
-    private lateinit var topicList: HashMap<String,List<String>>
-    private lateinit var eListView: ExpandableListView
-
+    var _binding: FragmentFaqBinding? = null
+    val header : MutableList<String> = ArrayList()
+    val body : MutableList<MutableList<String>> = ArrayList()
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        showList()
-        eListView = view?.findViewById(R.id.eListView)!!
-        listViewAdapter = eListViewAdapter(requireContext(), chapterList,topicList)
-        eListView.setAdapter(listViewAdapter)
-        // Inflate the layout for this fragment
-        return eListView
+        _binding = FragmentFaqBinding.inflate(inflater, container, false)
+        header.add("Вопрос 1")
+        header.add("Вопрос 2")
+        header.add("Вопрос 3")
+        val answer1: MutableList<String> = ArrayList()
+        answer1.add("Ответ 1")
+        val answer2: MutableList<String> = ArrayList()
+        answer2.add("Ответ 2")
+        val answer3: MutableList<String> = ArrayList()
+        answer3.add("Ответ 3")
+        body.add(answer1)
+        body.add(answer2)
+        body.add(answer3)
+
+        binding.expandableListView.setAdapter(eListViewAdapter(requireContext(),header,body))
+        return binding.root
     }
 
-    private fun showList() {
-        chapterList = ArrayList()
-        topicList = HashMap()
-        (chapterList as ArrayList<String>).add("Вопрос 1")
-        (chapterList as ArrayList<String>).add("Вопрос 2")
-        (chapterList as ArrayList<String>).add("Вопрос 3")
 
-        val topic1 : MutableList<String> = ArrayList()
-        topic1.add("Необходимо пройти регистрацию")
-        val topic2 : MutableList<String> = ArrayList()
-        topic2.add("Необходимо заполнить анкету")
-        val topic3 : MutableList<String> = ArrayList()
-        topic3.add("Необходимо пройти тест")
-
-        topicList[chapterList[0]]=topic1
-        topicList[chapterList[1]]=topic2
-        topicList[chapterList[2]]=topic3
-
-
-    }
 
 }
