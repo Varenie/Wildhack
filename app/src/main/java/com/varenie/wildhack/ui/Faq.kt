@@ -25,15 +25,17 @@ class Faq : Fragment() {
             Navigation.findNavController(it).apply { popBackStack() }
         }
 
-        header.add("Вопрос 1")
-        header.add("Вопрос 2")
-        header.add("Вопрос 3")
+        header.add("Когда начинается приём заявок?")
+        header.add("Какие сроки выполнения работ?")
+        header.add("Связь на кордонах?")
         val answer1: MutableList<String> = ArrayList()
-        answer1.add("Ответ 1")
+        answer1.add("Прием заявок на 2022 год начинается с 05.12.2021 год")
         val answer2: MutableList<String> = ArrayList()
-        answer2.add("Ответ 2")
+        answer2.add("Минимальный срок работы на охраняемых территориях-3 недели.")
         val answer3: MutableList<String> = ArrayList()
-        answer3.add("Ответ 3")
+        answer3.add("На всех кордонах есть электрогенераторы и солнечные батареи, то есть, возможность заряжать гаджеты у вас будет.\n" +
+                "Сотовой связи нет нигде. На многих кордонах утром и вечером есть интернет (очень медленный, но весточку родным\n" +
+                "отправить возможно).")
         body.add(answer1)
         body.add(answer2)
         body.add(answer3)

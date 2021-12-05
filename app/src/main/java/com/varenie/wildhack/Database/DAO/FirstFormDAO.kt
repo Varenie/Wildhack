@@ -189,7 +189,7 @@ class FirstFormDAO(val context: Context) {
         cursor = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
         cursor.moveToFirst()
 
-        val myId: Int = (System.currentTimeMillis() % 1_000_000).toInt()
+        val myId: Int = (System.currentTimeMillis() % 1_000).toInt()
         return FirstForm(
             myId,
             cursor.getString(indexName),
