@@ -27,7 +27,7 @@
     <string name="living_place_label">Край/область, населенный пункт</string>
     <string name="living_place_example">Место жительства</string>
     <string name="privacy_policy">Я согласен с <u>политикой использования перснональных данных</u></string>
-    <string name="text_in_check">Лалала</string>
+    <string name="text_in_check">Прогресс</string>
     <string name="about_oneself">Рассказать о себе</string>
     <string name="test_text">Пройти тест</string>
     <string name="skills">Указать свои навыки</string>
@@ -108,9 +108,9 @@
     <string name="tv_eq3">• Третье</string>
     <string name="accomodation_desc">Волонтёры, работающие на кордонах, размещаются в домиках или модулях (сборные сезонные конструкции), спят в спальниках, либо на раскладушках с постельным бельём. Туалеты расположены вне домиков. Есть баня иили душ, возможность стирать и сушить личные вещи. Волонтёры, участвующие в работах по прочистке троп, иногда ночуют в палатках или в инспекторских домах на полевых стационарах (условия минимальные).</string>
     <string name="documents_pac">Пакет Документов</string>
-    <string name="document_1">• Документ 1</string>
-    <string name="document_2">• Документ 2</string>
-    <string name="document_3">• Документ 3</string>
+    <string name="document_1">• Договор</string>
+    <string name="document_2">• Мед. справка</string>
+    <string name="document_3">• Рассказ о себе</string>
     <string name="info_cardon">Информация о кордонах</string>
     <string name="link_on_socialnetwork">Link on socialNetwork</string>
 </resources>
