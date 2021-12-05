@@ -25,7 +25,7 @@ class final_test : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         postToList()
         binding = FragmentFinalTestBinding.inflate(inflater, container, false)
 

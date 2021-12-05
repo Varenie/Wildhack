@@ -28,7 +28,21 @@ class tutorials : Fragment() {
             Navigation.findNavController(it).apply { popBackStack() }
         }
 
+        binding.llReg1.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_tutorials_to_lesson1)
+        }
 
+        binding.llReg2.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_tutorials_to_lesson1)
+        }
+
+        binding.llReg2.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_tutorials_to_lesson1)
+        }
+
+        binding.llTest.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_tutorials_to_final_test)
+        }
         return root
     }
 

@@ -215,5 +215,22 @@
         android:id="@+id/tutorials"
         android:name="com.varenie.wildhack.ui.Course.tutorials"
         android:label="fragment_tutorials"
-        tools:layout="@layout/fragment_tutorials" />
+        tools:layout="@layout/fragment_tutorials" >
+        <action
+            android:id="@+id/action_tutorials_to_lesson1"
+            app:destination="@id/lesson1" />
+        <action
+            android:id="@+id/action_tutorials_to_final_test"
+            app:destination="@id/final_test" />
+    </fragment>
+    <fragment
+        android:id="@+id/lesson1"
+        android:name="com.varenie.wildhack.ui.Course.lesson1"
+        android:label="fragment_lesson1"
+        tools:layout="@layout/fragment_lesson1" />
+    <fragment
+        android:id="@+id/final_test"
+        android:name="com.varenie.wildhack.ui.Course.final_test"
+        android:label="fragment_final_test"
+        tools:layout="@layout/fragment_final_test" />
 </navigation>

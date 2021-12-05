@@ -73,11 +73,4 @@
         app:layout_constraintStart_toStartOf="@id/content_start"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         />
-
-
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

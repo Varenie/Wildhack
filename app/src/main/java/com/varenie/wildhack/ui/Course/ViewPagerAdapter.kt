@@ -4,7 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.varenie.wildhack.R
 
@@ -37,6 +40,14 @@ class ViewPagerAdapter(private var question: List<String>,
         holder.answer2.text=answer2[position]
         holder.answer3.text=answer3[position]
         holder.answer4.text=answer4[position]
+
+        val btnBack = holder.itemView.findViewById<ImageButton>(R.id.btn_back)
+
+        btnBack.setOnClickListener {
+            Navigation.findNavController(it).apply {
+                popBackStack()
+            }
+        }
 
     }
 
