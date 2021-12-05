@@ -30,7 +30,7 @@ data class FirstForm(
 
     val about_your_hard_skills: String,
     val creative_material: String,
-    val consent_to_publish_creative: Boolean,
+    val consent_to_publish_creative: String,
     val how_find_school: String,
     val consent_to_data_collection: String
 )

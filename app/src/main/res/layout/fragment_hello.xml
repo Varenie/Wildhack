@@ -60,11 +60,11 @@
             android:id="@+id/iv_reg1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_question_answer_40"
+            android:src="@drawable/ic_faq"
             android:layout_weight="0.1"/>
 
         <TextView
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="5dp"
             android:id="@+id/tv_reg1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -72,8 +72,7 @@
             android:gravity="center_vertical"
             android:text="@string/faq"
             android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textSize="24sp"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/ll_reg2"
@@ -91,11 +90,11 @@
             android:id="@+id/iv_reg2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_cases_40"
+            android:src="@drawable/ic_equip"
             android:layout_weight="0.1"/>
 
         <TextView
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="5dp"
             android:id="@+id/tv_reg2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -121,11 +120,11 @@
             android:id="@+id/iv_reg3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_text_snippet_40"
+            android:src="@drawable/ic_document"
             android:layout_weight="0.1"/>
 
         <TextView
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="5dp"
             android:id="@+id/tv_reg3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -151,11 +150,11 @@
             android:id="@+id/iv_reg4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_house_40"
+            android:src="@drawable/ic_home"
             android:layout_weight="0.1"/>
 
         <TextView
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="5dp"
             android:id="@+id/tv_reg4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -181,11 +180,11 @@
             android:id="@+id/iv_reg5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_star_40"
+            android:src="@drawable/ic_ligtning"
             android:layout_weight="0.1"/>
 
         <TextView
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="5dp"
             android:id="@+id/tv_reg5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

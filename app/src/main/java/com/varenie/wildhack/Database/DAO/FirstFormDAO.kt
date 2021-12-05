@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
+import com.varenie.wildhack.Database.Entities.FirstForm
 import com.varenie.wildhack.Database.FirstFormDBHelper
 import com.varenie.wildhack.Database.FirstFormDBHelper.Companion.COLUMN_about_your_hard_skills
 import com.varenie.wildhack.Database.FirstFormDBHelper.Companion.COLUMN_about_your_soft_skills
@@ -154,7 +155,7 @@ class FirstFormDAO(val context: Context) {
         db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
     }
 
-    fun addCreative(id: Int, creative: ByteArray) {
+    fun addCreative(id: Int, creative: String) {
         val values = ContentValues().apply {
             put(COLUMN_about_your_hard_skills, creative)
         }
@@ -181,6 +182,41 @@ class FirstFormDAO(val context: Context) {
             put(COLUMN_consent_to_data_collection, isAgree)
         }
         db.update(TABLE_NAME, values, "$COLUMN_id=?", arrayOf(id.toString()))
+    }
+
+    fun getForm(): FirstForm {
+        cursor = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
+        cursor.moveToFirst()
+
+        return FirstForm(
+            cursor.getInt(indexId),
+            cursor.getString(indexName),
+            cursor.getString(indexLastName),
+            cursor.getString(indexMiddleName),
+            "",
+            "",
+            cursor.getString(indexBirth),
+            cursor.getString(indexEmail),
+            cursor.getString(indexPhone),
+            cursor.getString(indexSocialNetwork),
+            cursor.getString(indexCity),
+            cursor.getString(indexProfession),
+            cursor.getString(indexCampingExperience),
+            cursor.getString(indexDistanPoint),
+            cursor.getString(indexCriteriaOfProject),
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            cursor.getString(indexHardSkills),
+            "",
+            cursor.getString(indexIsCanPublish),
+            cursor.getString(indexHowFindSchool),
+            cursor.getString(indexIsCanCollectData)
+        )
     }
 
     fun checkDB() {

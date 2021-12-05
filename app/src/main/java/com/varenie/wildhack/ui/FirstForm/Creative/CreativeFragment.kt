@@ -69,7 +69,7 @@ class CreativeFragment : Fragment() {
             }
 
             val table = FirstFormDAO(requireContext())
-            table.addCreative(id, myArr!!)
+            table.addCreative(id, "myArr.toString()")
         }
 
         binding.btnSaveAndNext.setOnClickListener {
