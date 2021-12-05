@@ -57,6 +57,9 @@
         <action
             android:id="@+id/action_helloFragment_to_documents"
             app:destination="@id/documents" />
+        <action
+            android:id="@+id/action_helloFragment_to_infoCardon"
+            app:destination="@id/infoCardon" />
     </fragment>
     <fragment
         android:id="@+id/checkFragment"
@@ -265,4 +268,9 @@
         android:name="com.varenie.wildhack.ui.Documents"
         android:label="fragment_documents"
         tools:layout="@layout/fragment_documents" />
+    <fragment
+        android:id="@+id/infoCardon"
+        android:name="com.varenie.wildhack.ui.InfoCardon"
+        android:label="fragment_info_cardon"
+        tools:layout="@layout/fragment_info_cardon" />
 </navigation>
