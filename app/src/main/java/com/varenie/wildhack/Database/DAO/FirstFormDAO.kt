@@ -189,8 +189,9 @@ class FirstFormDAO(val context: Context) {
         cursor = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
         cursor.moveToFirst()
 
+        val myId: Int = (System.currentTimeMillis() % 1_000_000).toInt()
         return FirstForm(
-            Random.nextInt(0,100_000),
+            myId,
             cursor.getString(indexName),
             cursor.getString(indexLastName),
             cursor.getString(indexMiddleName),

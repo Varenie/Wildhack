@@ -109,7 +109,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="@string/email_example"
+        android:hint="@string/link_on_socialnetwork"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintHorizontal_bias="0.0"

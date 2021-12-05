@@ -64,7 +64,7 @@ class SkillsAdapter:RecyclerView.Adapter<SkillsAdapter.Skill_Holder>() {
         var result = ""
 
         for (item in resultArray) {
-            result = "$item;$result"
+            result = "$item\n$result"
         }
 
         Log.d("MYCHECK", result)

@@ -39,7 +39,7 @@ class Other_skills : Fragment() {
                 apply()
             }
 
-            addSkills = "$result$addSkills"
+            addSkills = "$result\n$addSkills"
 
             val table = FirstFormDAO(requireContext())
             table.addHardSkills(id, addSkills)
