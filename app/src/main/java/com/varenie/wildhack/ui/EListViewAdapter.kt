@@ -9,7 +9,7 @@ import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
 import com.varenie.wildhack.R
 
-class eListViewAdapter(var context: Context, var header: MutableList<String>, var body:MutableList<MutableList<String>>) :BaseExpandableListAdapter(){
+class EListViewAdapter(var context: Context, var header: MutableList<String>, var body:MutableList<MutableList<String>>) :BaseExpandableListAdapter(){
     override fun getGroupCount(): Int {
         return header.size
     }

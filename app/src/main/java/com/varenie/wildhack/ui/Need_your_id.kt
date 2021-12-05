@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.varenie.wildhack.R
 
 
-class need_your_id : Fragment() {
+class Need_your_id : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

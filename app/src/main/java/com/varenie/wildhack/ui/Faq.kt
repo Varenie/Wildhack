@@ -4,16 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.varenie.wildhack.R
-import com.varenie.wildhack.databinding.FragmentDataAgreementBinding
 import com.varenie.wildhack.databinding.FragmentFaqBinding
-import com.varenie.wildhack.databinding.FragmentFinalTestBinding
 
 
-class faq : Fragment() {
+class Faq : Fragment() {
     var _binding: FragmentFaqBinding? = null
     val header : MutableList<String> = ArrayList()
     val body : MutableList<MutableList<String>> = ArrayList()
@@ -41,7 +38,7 @@ class faq : Fragment() {
         body.add(answer2)
         body.add(answer3)
 
-        binding.expandableListView.setAdapter(eListViewAdapter(requireContext(),header,body))
+        binding.expandableListView.setAdapter(EListViewAdapter(requireContext(),header,body))
         return binding.root
     }
 
