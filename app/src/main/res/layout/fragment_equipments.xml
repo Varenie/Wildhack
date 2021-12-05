@@ -60,12 +60,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0"
         >
-    <ImageView
-        android:id="@+id/iv_eq1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_control_point_40"
-        android:layout_weight="0.1"/>
     <TextView
         android:text="@string/tv_eq1"
         android:id="@+id/tv_title1"
@@ -89,12 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ll_eq_1"
         app:layout_constraintVertical_bias="0.0"
         >
-        <ImageView
-            android:id="@+id/iv_eq2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_control_point_40"
-            android:layout_weight="0.1"/>
+
         <TextView
             android:text="@string/tv_eq2"
             android:id="@+id/tv_title2"
@@ -118,12 +107,6 @@
         app:layout_constraintTop_toBottomOf="@+id/ll_eq_2"
         app:layout_constraintVertical_bias="0.0"
         >
-        <ImageView
-            android:id="@+id/iv_eq3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_control_point_40"
-            android:layout_weight="0.1"/>
         <TextView
             android:text="@string/tv_eq3"
             android:id="@+id/tv_title3"

@@ -16,10 +16,14 @@ class equipments : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    val header : MutableList<String> = ArrayList()
+    val body : MutableList<MutableList<String>> = ArrayList()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentEquipmentsBinding.inflate(inflater, container, false)
 
         binding.btnBack.setOnClickListener{
