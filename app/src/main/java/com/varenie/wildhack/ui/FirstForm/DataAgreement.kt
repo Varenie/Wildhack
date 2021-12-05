@@ -37,22 +37,13 @@ class DataAgreement : Fragment() {
         }
 
         binding.btnFinish.setOnClickListener {
-            var isAgree = ""
-
-            if (binding.cbYes.isChecked || binding.cbNo.isChecked) {
-                if (binding.cbYes.isChecked) {
-                    isAgree = "true"
-                }
-                if (binding.cbNo.isChecked) {
-                    isAgree = "false"
-                }
-
+            if (binding.cbYes.isChecked) {
                 val sharedPref =
                     requireActivity().getSharedPreferences("MyPref", Context.MODE_PRIVATE)
                 val id = sharedPref.getInt("FormId", 0)
 
                 val table = FirstFormDAO(requireContext())
-                table.addCollectionData(id, isAgree)
+                table.addCollectionData(id, "true")
 
                 Navigation.findNavController(it).navigate(R.id.action_dataAgreement_to_complete)
             }
